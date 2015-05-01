@@ -1,7 +1,7 @@
 require("../stylesheets/app.css");
 require("../stylesheets/fonts.css");
 
-var App = require('./app/Index.js');
+var App = require('./app/Index.jsx');
 var React = require('react');
 
 React.render(

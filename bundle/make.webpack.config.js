@@ -6,7 +6,7 @@ module.exports = function(name) {
 
   var ENV = process.env.ENV;
   var filename = name + ".bundle.js";
-  var entry = "./assets/javascripts/" + name + ".js";
+  var entry = "./assets/javascripts/" + name + ".jsx";
 
   if (ENV === "development") {
     filename = "__" + filename;
@@ -43,10 +43,8 @@ module.exports = function(name) {
     module: {
       loaders: [
         { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader'},
-        { test: /\.cjsx$/, loaders: ["coffee", "cjsx"]},
-        { test: /\.coffee$/, loader: "coffee" },
+        { test: /\.jsx?$/, exclude: /node_modules/, loader: 'babel-loader?optional=runtime' },
         { test: /\.css$/, loader: "style-loader!css-loader" },
-        { test: /\.scss$/, loader: "style!css!sass?outputStyle=expanded" },
         { test: /\.otf$/, loader: "url-loader?mimetype=font/opentype" },
         { test: /\.png$/, loader: "url-loader?mimetype=image/png" },
         { test: /\.jpg$/, loader: "url-loader?mimetype=image/jpg" }
