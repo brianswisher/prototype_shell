@@ -42,7 +42,6 @@ module.exports = function(name) {
     },
     module: {
       loaders: [
-        { test: /\.jsx$/, loader: "jsx-loader" },
         { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader'},
         { test: /\.cjsx$/, loaders: ["coffee", "cjsx"]},
         { test: /\.coffee$/, loader: "coffee" },
