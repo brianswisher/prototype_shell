@@ -1,4 +1,4 @@
-require("../../stylesheets/my-app/main.css");
+require("../../stylesheets/app/main.css");
 
 var $ = require('jquery');
 var keymaster = require('keymaster');

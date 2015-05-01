@@ -1,10 +1,10 @@
-require("../stylesheets/my-app.css");
+require("../stylesheets/app.css");
 require("../stylesheets/fonts.css");
 
-var MyApp = require('./my-app/MyApp.jsx');
+var App = require('./app/Index.jsx');
 var React = require('react');
 
 React.render(
-  <MyApp />,
+  <App />,
   document.getElementById('viewport')
 );
