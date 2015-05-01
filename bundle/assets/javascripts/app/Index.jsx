@@ -5,7 +5,8 @@ export default React.createClass({
 
   render:function(){
     var style = {
-      color: 'blue'
+      color: 'blue',
+      fontFamily: 'arial'
     };
 
     return (

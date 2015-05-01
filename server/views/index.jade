@@ -11,12 +11,7 @@ html(lang="en")
       div(id="viewport")
         if !is_mobile
           p loading...
-    if is_mobile || !is_mobile
-      script.
-        console.log("#{ENV}");
-        var preload_data = {
-          path: "#{path}"
-        };        
+    if is_mobile || !is_mobile     
       if ENV === 'development'
         script(src="__app.bundle.js")      
       else
