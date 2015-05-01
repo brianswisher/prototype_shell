@@ -5,6 +5,7 @@
   var router = express.Router();
   var db = require('diskdb');
   var mobile = require('is-mobile');
+  var ENV = process.env.ENV;
 
   db = db.connect('server/db', ['items']);
 
@@ -43,6 +44,7 @@
   router.get('*', function(req, res) {
     res.render('index', {
       is_mobile: mobile(req),
+      ENV: ENV,
       path: req.params[0]
     });
   });
