@@ -31,7 +31,11 @@
   "devDependencies": {
     "babel-loader": "^5.0.0",
     "browser-sync": "^1.9.0",
+    "fibers": "^1.0.5",
     "lodash": "^2.4.1",
+    "node-jsx": "^0.13.3",
+    "react-async": "^2.1.0",
+    "react-router-component": "^0.24.4",
     "webpack": "^1.4.15"
   },
   "napa": {

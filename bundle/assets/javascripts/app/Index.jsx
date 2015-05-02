@@ -1,18 +1,22 @@
 var React = require('react');
+var Link= require ('react-router-component').Link;
 
-export default React.createClass({
-  displayName: 'App',
+module.exports =
+  React.createClass({
 
-  render:function(){
-    var style = {
-      color: 'blue',
-      fontFamily: 'arial'
-    };
+    displayName: 'App',
 
-    return (
-      <div className="app" style={style}>
-        App
-      </div>
-    )
-  }
-});
+    render:function(){
+      var style = {
+        color: 'blue',
+        fontFamily: 'arial'
+      };
+      var url='/page-one';
+
+      return (
+        <div className="app" style={style}>
+          <Link href={url}>App</Link>
+        </div>
+      )
+    }
+  });
